@@ -1,0 +1,14 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+from odglib import *
+import argparse
+import wx
+odg = odgSrc()
+odg.FULLSCREEN=True
+odg.setParams("/home/pi/myradio/myradio.ini")
+odg.setUI(odg.APPPATH+"/odg/ford_aa_gui.odg")
+odg.screen = wx.App()
+odg.initUI()                # on lance interface utilisateur
+#odg.window.Centre()         # on centre la fenetre principale
+odg.window.Show(True)       # on affiche tout
+odg.screen.MainLoop()       # et c'est tout !!!'
